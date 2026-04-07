@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plamtec - Ekosistem Digitalisasi Pabrik Kelapa Sawit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#002c64",
+                    "on-secondary-fixed": "#001c3b",
+                    "inverse-primary": "#95d3ba",
+                    "tertiary-container": "#00428e",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface": "#f7f9fb",
+                    "primary-fixed": "#b0f0d6",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-surface": "#191c1e",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#adc7ff",
+                    "surface-container": "#eceef0",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#004787",
+                    "on-tertiary-container": "#8bb2ff",
+                    "on-secondary-container": "#00427d",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d5e3ff",
+                    "outline-variant": "#bfc9c3",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary-fixed-variant": "#004493",
+                    "primary": "#003527",
+                    "on-background": "#191c1e",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "on-tertiary-fixed": "#001a41",
+                    "background": "#f7f9fb",
+                    "secondary": "#1c5fa8",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#404944",
+                    "secondary-fixed-dim": "#a6c8ff",
+                    "on-primary-fixed": "#002117",
+                    "on-primary-container": "#80bea6",
+                    "outline": "#707974",
+                    "surface-tint": "#2b6954",
+                    "primary-container": "#064e3b",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#79b0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk", "Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
+        .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+        .hero-gradient { background: linear-gradient(135deg, #003527 0%, #064e3b 100%); }
+        .gradient-primary { background: linear-gradient(135deg, #003527 0%, #064e3b 100%); }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-bold tracking-tight text-emerald-900 dark:text-emerald-50 font-headline">Plamtec</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-emerald-700 dark:text-emerald-400 font-semibold border-b-2 border-emerald-700 transition-colors duration-300" href="#">Platform</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 transition-colors duration-300" href="#">Peta Pabrik</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 transition-colors duration-300" href="#">Ketertelusuran</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 transition-colors duration-300" href="#">Teknologi</a>
+</div>
+<button class="bg-primary hover:opacity-80 active:scale-95 transition-all text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold">Akses Terminal</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Section 1: Hero -->
+<section class="relative bg-white py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-6">
+<h1 class="text-5xl lg:text-7xl font-light font-headline leading-tight text-primary mb-8 tracking-tight">
+                        Plamtec: Ekosistem <span class="font-bold">Digitalisasi Pabrik</span> Kelapa Sawit Terintegrasi
+                    </h1>
+<p class="text-on-surface-variant text-lg max-w-xl mb-10 leading-relaxed">
+                        Transformasi operasional mill konvensional menjadi ekosistem data-driven yang presisi dengan Enterprise Solutions Module.
+                    </p>
+<div class="flex gap-4">
+<button class="hero-gradient text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all">Eksplorasi Solusi</button>
+<button class="bg-surface-container text-primary px-8 py-4 rounded-xl font-semibold hover:bg-surface-container-high transition-all">Lihat Demo</button>
+</div>
+</div>
+<div class="lg:col-span-6 relative flex justify-center items-center">
+<!-- Tablet Mockup Wrapper -->
+<div class="relative z-10 w-full max-w-lg aspect-[4/3] bg-surface-container-highest rounded-[2rem] p-4 shadow-2xl overflow-hidden border-8 border-slate-900">
+<div class="absolute inset-0 bg-white overflow-hidden rounded-[1.5rem]">
+<img class="w-full h-full object-cover" data-alt="ultra clean dashboard interface showing industrial palm oil factory metrics with charts and circular status indicators in emerald tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjivxuPakQ19DD5pyOZpu4IG9K4Y-y8VQm-eAA_aU3xkF-NLAA55hbX_0WIKc1_xMmlo95EpLRRmdUlG037H9GwZr0mlfkljfKabh9fMWV_vDy1Gv37RHjmLclD4T8s5_TdJVaeODRyjaDWFtnFeZr2RyO8QIBH-tGvtcVL66hqFbImE2pw1iwk-jzW_vLE7HV58f10qCq0VYg-Kt9PI4smyIZsNXql6oV1Fbo7jAhoCUZiRE1gzD3rER3_JAvygN6jvbXAi0f-rE"/>
+</div>
+</div>
+<!-- Side Labels (Floating) -->
+<div class="absolute -top-4 -right-4 z-20 glass-card p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="sync" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sync</span>
+<div>
+<p class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-bold">Latency</p>
+<p class="text-sm font-headline font-bold text-primary">Sinkronisasi 10 Detik</p>
+</div>
+</div>
+<div class="absolute bottom-12 -left-8 z-20 glass-card p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<p class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-bold">Accuracy</p>
+<p class="text-sm font-headline font-bold text-primary">Integritas Data 100%</p>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-8 z-20 glass-card p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="factory" data-weight="fill" style="font-variation-settings: 'FILL' 1;">factory</span>
+<div>
+<p class="text-[0.65rem] uppercase tracking-widest text-on-surface-variant font-bold">Scale</p>
+<p class="text-sm font-headline font-bold text-primary">Akses Multi-Pabrik</p>
+</div>
+</div>
+<!-- Abstract Background Shapes -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-surface-container-low rounded-full opacity-50 blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Arsitektur Teknologi Masa Depan -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-bold text-primary mb-4">Arsitektur Teknologi Masa Depan</h2>
+<div class="h-1 w-24 bg-primary-container rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Block 1 -->
+<div class="glass-card p-10 rounded-2xl border border-white hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="devices">devices</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Flutter (Desktop &amp; Mobile)</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Antarmuka responsif untuk operasional lapangan. Memberikan pengalaman pengguna yang konsisten di berbagai perangkat keras.
+                        </p>
+</div>
+<!-- Block 2 -->
+<div class="glass-card p-10 rounded-2xl border border-white hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="dashboard">dashboard</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">React TypeScript (Admin Web)</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Dashboard monitoring pusat dengan tipe data yang kuat untuk keamanan dan reliabilitas data perusahaan yang krusial.
+                        </p>
+</div>
+<!-- Block 3 -->
+<div class="glass-card p-10 rounded-2xl border border-white hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="memory">memory</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Golang (High-Perf Backend)</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Pemrosesan data skala besar dengan latensi rendah, menangani ribuan transaksi data sensor secara simultan.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Alur Perjalanan Buah -->
+<section class="py-32 bg-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-headline font-bold text-primary mb-6">Alur Perjalanan Buah</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Sistem ketertelusuran yang menghubungkan setiap titik kritis produksi dalam satu garis koordinasi digital.</p>
+</div>
+<div class="relative">
+<!-- Path Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container-highest -translate-y-1/2 hidden lg:block">
+<div class="h-full bg-primary-container w-1/3 animate-pulse opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Point 1 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 border-4 border-surface z-20">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="scale">scale</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-primary mb-2">Apta Scaling</h4>
+<p class="text-sm text-on-surface-variant">Timbangan digital otomatis</p>
+</div>
+<!-- Point 2 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 border-4 border-surface z-20">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="smartphone">smartphone</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-primary mb-2">Apta Grading</h4>
+<p class="text-sm text-on-surface-variant">Sortasi buah digital</p>
+</div>
+<!-- Point 3 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 border-4 border-surface z-20">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="tablet_mac">tablet_mac</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-primary mb-2">Apta Lab</h4>
+<p class="text-sm text-on-surface-variant">Monitoring mutu &amp; losses</p>
+</div>
+<!-- Point 4 -->
+<div class="flex flex-col items-center text-center relative">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 border-4 border-surface z-20">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="database">database</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-primary mb-2">Apta Sounding</h4>
+<p class="text-sm text-on-surface-variant">Pengukuran stok tangki</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract background graphic for line -->
+<div class="absolute top-1/2 left-0 w-full opacity-10 pointer-events-none translate-y-[-50%]">
+<svg class="w-full" viewbox="0 0 1440 320">
+<path d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,202.7C960,224,1056,224,1152,192C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#064E3B" fill-opacity="1"></path>
+</svg>
+</div>
+</section>
+<!-- Section 4: Ketahanan Infrastruktur (Zero Downtime) -->
+<section class="bg-white py-32 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="w-full aspect-video rounded-[2.5rem] overflow-hidden bg-surface-container shadow-2xl">
+<img alt="Server Room" class="w-full h-full object-cover mix-blend-overlay opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlNedO3pgyBrx9kyEWpLyCygCOhvwICr-5bwJ7Qho4xzVUMKOQprD95uRY0LHj0TkQ7Lu8efVWWFQO6vcePd38TJyWBSH3-Nqly0_Va-ajhyGjkRNmVgKpVwA459PfTR9cTwEN8lXKuZURzbq3DpvxSQNTrxDYvBs8s6S0UvUpyHuGca7PLzgClZuHvYsTfBC2GErn1uJbLr_mcywqVyVqIgkLBWHvOJjDWdXXq_hnjeTAFFvS6u4vxverYzpkKSxmQUVLeHmDeC8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center space-y-6">
+<div class="w-24 h-24 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto border border-white/30">
+<span class="material-symbols-outlined text-primary text-5xl">dns</span>
+</div>
+<h4 class="text-primary font-bold text-xl">In-House Infrastructure</h4>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl max-w-xs shadow-2xl">
+<p class="text-sm font-medium leading-relaxed italic">"Menjamin operasional tetap berjalan meski tanpa koneksi internet satelit."</p>
+</div>
+</div>
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="text-5xl font-light text-primary font-headline leading-tight tracking-tight">Arsitektur Tanpa Henti <br/><span class="font-bold">(Zero Downtime)</span></h2>
+<p class="text-on-surface-variant text-xl font-light">Infrastruktur Plamtec dirancang khusus untuk kondisi remote area dengan keterbatasan sinyal.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+<div class="space-y-5">
+<span class="material-symbols-outlined text-primary text-4xl">storage</span>
+<h4 class="text-xl font-bold text-primary font-headline">Local Server Edge</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Data diproses di lokasi secara instan tanpa ketergantungan pada cloud pusat untuk operasi kritikal.</p>
+</div>
+<div class="space-y-5">
+<span class="material-symbols-outlined text-primary text-4xl">router</span>
+<h4 class="text-xl font-bold text-primary font-headline">Internal Mesh Network</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Jaringan khusus area pabrik yang menghubungkan semua terminal secara nirkabel 24/7.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 text-[20rem] font-black text-slate-50 select-none -z-0 opacity-40">STABLE</div>
+</section>
+<!-- Section 5: Apta Mill - Pusat Command Center Global -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24 space-y-6">
+<h2 class="text-5xl font-light text-primary font-headline tracking-tight">Apta Mill: <span class="font-bold">Command Center Global</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg font-light">Pantau seluruh rantai produksi dari satu layar terpusat dengan protokol keamanan tingkat tinggi.</p>
+</div>
+<div class="bg-white rounded-[4rem] p-6 shadow-sm border border-outline-variant/10">
+<div class="relative w-full aspect-[21/9] bg-slate-50 rounded-[3.5rem] overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFwJ2e7ftJyfEhMjZtwnlUG-rfiAS_WElw0wSefGQl31kT9F39idnW-aoilZtPjtnuyRqnUcF8RQW7MJ-C_A4ZWVBnkT_YPjzegWaCg7CQj6wYkm1zJA0pUtBLd3rke5_0EpcCpK_WeYA5gzqZMWkSiAeK0sYBTVLjCMSogeFN-f85oSRl9dgg-zvOjvi4871SiImbO7IJgbvXwpP-c967WvrOyPDKEVOizxOLc-upZEaqV2kyRMYxtaYrbS3jTWixfweUXLcDHRk"/>
+</div>
+<!-- Pulsing Pins -->
+<div class="absolute top-1/3 left-1/4">
+<div class="relative">
+<div class="absolute inset-0 animate-ping rounded-full bg-primary/40 h-10 w-10"></div>
+<div class="relative bg-primary h-5 w-5 rounded-full border-2 border-white"></div>
+<div class="absolute top-8 -left-16 glass-panel px-4 py-2 rounded-xl shadow-lg border border-outline-variant/20 min-w-[120px]">
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider">PKS Medan Area</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-1/4 right-1/3">
+<div class="relative">
+<div class="absolute inset-0 animate-ping rounded-full bg-secondary/40 h-10 w-10"></div>
+<div class="relative bg-secondary h-5 w-5 rounded-full border-2 border-white"></div>
+<div class="absolute top-8 -left-16 glass-panel px-4 py-2 rounded-xl shadow-lg border border-outline-variant/20 min-w-[140px]">
+<span class="text-[11px] font-bold text-secondary uppercase tracking-wider">PKS Labuhan Batu</span>
+</div>
+</div>
+</div>
+<!-- Info Panels -->
+<div class="absolute top-10 right-10 flex flex-col gap-6">
+<div class="bg-white/95 backdrop-blur-xl p-8 rounded-[2rem] border border-outline-variant/15 shadow-2xl max-w-sm">
+<div class="flex items-center gap-5 mb-6">
+<div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600 text-3xl">sync</span>
+</div>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest mb-1">Network State</div>
+<div class="text-base font-bold text-primary">Sinkronisasi 10 Detik</div>
+</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-full animate-pulse"></div>
+</div>
+</div>
+<div class="bg-white/95 backdrop-blur-xl p-8 rounded-[2rem] border border-outline-variant/15 shadow-2xl max-w-sm">
+<div class="flex items-center gap-5 mb-4">
+<div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-3xl">verified_user</span>
+</div>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest mb-1">Security</div>
+<div class="text-base font-bold text-primary">OTP Head Office</div>
+</div>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Parameter kritikal memerlukan verifikasi biometrik atau OTP instan dari kantor pusat untuk eksekusi.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="max-w-7xl mx-auto px-8 py-40">
+<div class="gradient-primary rounded-[4rem] p-24 flex flex-col items-center text-center space-y-10 shadow-[0_50px_100px_rgba(0,53,39,0.2)] relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px]"></div>
+<h2 class="text-6xl font-light text-white font-headline leading-tight max-w-4xl tracking-tight">
+                    Siap Mendigitalisasi Operasi <span class="font-bold">Pabrik Anda?</span>
+</h2>
+<p class="text-primary-fixed-dim text-xl max-w-2xl font-light">
+                    Konsultasikan kebutuhan spesifik pabrik Anda dengan tim ahli transformasi digital kami.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 pt-6">
+<button class="bg-white text-primary px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl">
+                        Jadwalkan Demo Gratis
+                    </button>
+<button class="border border-white/30 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all">
+                        Unduh Brosur Teknis
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-emerald-900 dark:text-emerald-50 font-headline mb-6">Plamtec</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    Solusi integrasi pabrik sawit masa depan. Membangun fondasi digital untuk industri yang berkelanjutan.
+                </p>
+<p class="text-xs text-slate-400 dark:text-slate-500">© 2024 Plamtec. Solusi Enterprise Terintegrasi. Semua Hak Dilindungi.</p>
+</div>
+<div>
+<h6 class="font-headline font-bold text-emerald-900 dark:text-emerald-400 mb-6 text-sm uppercase tracking-widest">Produk</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-emerald-600 transition-all" href="#">Platform Apta</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Ketertelusuran</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Peta Interaktif</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">API Enterprise</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-emerald-900 dark:text-emerald-400 mb-6 text-sm uppercase tracking-widest">Perusahaan</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-emerald-600 transition-all" href="#">Tentang Kami</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Karir</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Kebijakan Privasi</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Syarat &amp; Ketentuan</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-emerald-900 dark:text-emerald-400 mb-6 text-sm uppercase tracking-widest">Bantuan</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-emerald-600 transition-all" href="#">Pusat Bantuan</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Dokumentasi</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Kontak Support</a></li>
+<li><a class="hover:text-emerald-600 transition-all" href="#">Status Sistem</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
