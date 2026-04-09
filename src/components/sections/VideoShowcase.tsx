@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { videoDemos, type VideoDemo } from '@/data/videoDemos';
 import { cn } from '@/lib/utils';
-import { Laptop, Tablet, Smartphone, Play, CheckCircle2 } from 'lucide-react';
+import { Laptop, Tablet, Smartphone, CheckCircle2 } from 'lucide-react';
 
 const DeviceMockup = ({ 
   type, 
